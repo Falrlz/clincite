@@ -1,0 +1,105 @@
+# ==========================================
+# Local Planning & AI Assistant Cache
+# ==========================================
+plan-docs/
+.claude/
+.impeccable/
+.cursor/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ==========================================
+# Environment & Secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# Python & Virtual Environments
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# uv & venv
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Linting & Formatting
+.ruff_cache/
+.mypy_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# ==========================================
+# Project Specific: RAG Data & Outputs
+# ==========================================
+# Raw clinical PDF documents (licensed / public guidelines)
+rag/data/raw/*
+!rag/data/raw/.gitkeep
+
+# Intermediate pipeline outputs (Docling parsed, chunks, MLflow SQLite)
+rag/outputs/
+!rag/outputs/.gitkeep
+
+# Local Qdrant embedded database directory inside promoted index
+# (We preserve index_info.json, but ignore the binary DB files)
+rag/index/qdrant_db/
+
+# ==========================================
+# Node / Frontend (For Phase 5)
+# ==========================================
+node_modules/
+.npm/
+.pnpm-store/
+dist/
+dist-ssr/
+*.local
+
+# ==========================================
+# Operating System Files
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
